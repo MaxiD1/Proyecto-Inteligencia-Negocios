@@ -6,10 +6,75 @@
     <Name>OLAP.database</Name>
     <FullPath>OLAP.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>OLAP Albarran.cube</Name>
+      <FullPath>OLAP Albarran.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>OLAP Albarran.partitions</Name>
+          <FullPath>OLAP Albarran.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>D Cliente.dim</Name>
+      <FullPath>D Cliente.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>D Sucursal.dim</Name>
+      <FullPath>D Sucursal.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>D Tiempo.dim</Name>
+      <FullPath>D Tiempo.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>D Producto.dim</Name>
+      <FullPath>D Producto.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>D Vendedor.dim</Name>
+      <FullPath>D Vendedor.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>F Ventas.dim</Name>
+      <FullPath>F Ventas.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>Albarran DW.ds</Name>
+      <FullPath>Albarran DW.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>Albarran DW.dsv</Name>
+      <FullPath>Albarran DW.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
-      <Options />
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>Albarran DW</Id>
+            <Name>Albarran DW</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=NITRO5;Integrated Security=SSPI;Initial Catalog=Albarran_DW</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>Albarran DW</Id>
+            <Name>Albarran DW</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
     </Configuration>
   </Configurations>
 </Project>
