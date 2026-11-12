@@ -7,12 +7,12 @@
   DTS:CreatorName="CORONAMUNDI\Digit"
   DTS:DTSID="{E6276EAA-2E79-4FB7-9DB7-67F4EE939EA9}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5467.0"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
   DTS:LocaleID="13322"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{CE57F74C-7CDF-4195-ADCD-6AAD0161098A}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{4761145C-1C89-444B-B0A3-E40ACE692119}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -99,7 +99,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -258,7 +258,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT cliente_id,
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT cliente_id,
        nombre + ' ' + appaterno + ' ' + apmaterno AS nombre,
        CAST(sexo AS NVARCHAR(1)) AS sexo,
        fecha_nacimiento,
@@ -475,7 +475,7 @@ FROM clientes</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -624,7 +624,7 @@ FROM clientes</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT p.producto_id,
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT p.producto_id,
        p.nombre,
        ISNULL(p.descripcion, 'Sin descripción') AS descripcion,
        ISNULL(c.categoria, 'Sin categoría') AS categoria
@@ -823,7 +823,7 @@ LEFT JOIN categorias c ON p.categoria_id = c.categoria_id</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -960,7 +960,7 @@ LEFT JOIN categorias c ON p.categoria_id = c.categoria_id</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT s.sucursal_id, s.sucursal, c.comuna
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT s.sucursal_id, s.sucursal, c.comuna
 FROM sucursales s
 LEFT JOIN comunas c ON s.comuna_id = c.comuna_id</property>
                 <property
@@ -1135,7 +1135,7 @@ LEFT JOIN comunas c ON s.comuna_id = c.comuna_id</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1288,7 +1288,7 @@ LEFT JOIN comunas c ON s.comuna_id = c.comuna_id</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT DISTINCT
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT DISTINCT
        YEAR(fecha) * 10000 + MONTH(fecha) * 100 + DAY(fecha) AS tiempo_id,
        CAST(fecha AS DATE) AS fecha,
        DAY(fecha)   AS dia,
@@ -1497,7 +1497,7 @@ FROM ventas</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1644,7 +1644,7 @@ FROM ventas</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT e.empleado_id,
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT e.empleado_id,
        e.nombre + ' ' + e.appaterno + ' ' + e.apmaterno AS nombre,
        c.nombre AS cargo,
        e.fecha_contrato
@@ -1840,7 +1840,7 @@ LEFT JOIN cargos c ON e.cargo_id = c.cargo_id</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1964,6 +1964,12 @@ LEFT JOIN cargos c ON e.cargo_id = c.cargo_id</property>
                       cachedScale="2"
                       externalMetadataColumnId="Package\H_VENTAS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[monto_neto]"
                       lineageId="Package\H_VENTAS\OLE DB Source.Outputs[OLE DB Source Output].Columns[monto_neto]" />
+                    <inputColumn
+                      refId="Package\H_VENTAS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[numero_documento]"
+                      cachedDataType="i4"
+                      cachedName="numero_documento"
+                      externalMetadataColumnId="Package\H_VENTAS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[numero_documento]"
+                      lineageId="Package\H_VENTAS\OLE DB Source.Outputs[OLE DB Source Output].Columns[numero_documento]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2024,6 +2030,10 @@ LEFT JOIN cargos c ON e.cargo_id = c.cargo_id</property>
                       name="monto_neto"
                       precision="18"
                       scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\H_VENTAS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[numero_documento]"
+                      dataType="i4"
+                      name="numero_documento" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2077,13 +2087,14 @@ LEFT JOIN cargos c ON e.cargo_id = c.cargo_id</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT YEAR(v.fecha) * 10000 + MONTH(v.fecha) * 100 + DAY(v.fecha) AS tiempo_id,
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT YEAR(v.fecha) * 10000 + MONTH(v.fecha) * 100 + DAY(v.fecha) AS tiempo_id,
        d.producto_id,
        v.cliente_id,
        v.sucursal_id,
        v.vendedor_id,
        v.venta_id,
        v.tipo_documento,
+       v.numero_documento,
        d.cantidad,
        d.precio_unitario,
        d.descuento,
@@ -2239,6 +2250,15 @@ INNER JOIN ventas v ON d.venta_id = v.venta_id</property>
                       precision="17"
                       scale="2"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\H_VENTAS\OLE DB Source.Outputs[OLE DB Source Output].Columns[numero_documento]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\H_VENTAS\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[numero_documento]"
+                      lineageId="Package\H_VENTAS\OLE DB Source.Outputs[OLE DB Source Output].Columns[numero_documento]"
+                      name="numero_documento"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2295,6 +2315,10 @@ INNER JOIN ventas v ON d.venta_id = v.venta_id</property>
                       name="monto_neto"
                       precision="13"
                       scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\H_VENTAS\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[numero_documento]"
+                      dataType="i4"
+                      name="numero_documento" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -2338,6 +2362,11 @@ INNER JOIN ventas v ON d.venta_id = v.venta_id</property>
                       length="255"
                       lineageId="Package\H_VENTAS\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[tipo_documento]"
                       name="tipo_documento" />
+                    <outputColumn
+                      refId="Package\H_VENTAS\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[numero_documento]"
+                      dataType="i4"
+                      lineageId="Package\H_VENTAS\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[numero_documento]"
+                      name="numero_documento" />
                     <outputColumn
                       refId="Package\H_VENTAS\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[cantidad]"
                       dataType="i4"
@@ -2447,12 +2476,12 @@ INNER JOIN ventas v ON d.venta_id = v.venta_id</property>
       DTS:To="Package\D_TIEMPO" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
-<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
-<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
   Version="8">
-  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
@@ -2699,13 +2728,13 @@ INNER JOIN ventas v ON d.venta_id = v.venta_id</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="155.2,41.6"
-          Id="Package\D_CLIENTE\OLE DB Source"
-          TopLeft="936,109" />
-        <NodeLayout
           Size="175.2,41.6"
           Id="Package\D_CLIENTE\OLE DB Destination"
           TopLeft="936,208" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\D_CLIENTE\OLE DB Source"
+          TopLeft="936,109" />
         <EdgeLayout
           Id="Package\D_CLIENTE.Paths[OLE DB Source Output]"
           TopLeft="1013.6,150.6">
@@ -2768,7 +2797,7 @@ INNER JOIN ventas v ON d.venta_id = v.venta_id</property>
     design-time-name="Package\D_PRODUCTO">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="155.2,41.6"
           Id="Package\D_PRODUCTO\OLE DB Source"
@@ -2796,7 +2825,9 @@ INNER JOIN ventas v ON d.venta_id = v.venta_id</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -2832,7 +2863,7 @@ INNER JOIN ventas v ON d.venta_id = v.venta_id</property>
     design-time-name="Package\D_SUCURSAL">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="155.2,41.6"
           Id="Package\D_SUCURSAL\OLE DB Source"
@@ -2860,7 +2891,9 @@ INNER JOIN ventas v ON d.venta_id = v.venta_id</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -2893,13 +2926,13 @@ INNER JOIN ventas v ON d.venta_id = v.venta_id</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="155.2,41.6"
-          Id="Package\D_TIEMPO\OLE DB Source"
-          TopLeft="946,274" />
-        <NodeLayout
           Size="175.2,41.6"
           Id="Package\D_TIEMPO\OLE DB Destination"
           TopLeft="938,395" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\D_TIEMPO\OLE DB Source"
+          TopLeft="946,274" />
         <EdgeLayout
           Id="Package\D_TIEMPO.Paths[OLE DB Source Output]"
           TopLeft="1024.6,315.6">
@@ -2950,7 +2983,7 @@ INNER JOIN ventas v ON d.venta_id = v.venta_id</property>
     design-time-name="Package\D_VENDEDOR">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="155.2,41.6"
           Id="Package\D_VENDEDOR\OLE DB Source"
@@ -2978,7 +3011,9 @@ INNER JOIN ventas v ON d.venta_id = v.venta_id</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
