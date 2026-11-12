@@ -588,7 +588,7 @@ The CALCULATE command controls the aggregation of leaf cells in the cube.
 If the CALCULATE command is deleted or modified, the data within the cube is affected.
 You should edit this command only if you manually specify how the cube is aggregated.
 */
-CALCULATE;  
+CALCULATE;   
 CREATE MEMBER CURRENTCUBE.[Measures].[Ventas Mes Anterior]
  AS (
   [Measures].[Monto Neto],
@@ -599,7 +599,7 @@ CREATE MEMBER CURRENTCUBE.[Measures].[Ventas Mes Anterior]
   )
 ), 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1  ; 
+VISIBLE = 1;  
 CREATE MEMBER CURRENTCUBE.[Measures].[Ventas Año Anterior]
  AS (
   [Measures].[Monto Neto],
@@ -610,12 +610,30 @@ CREATE MEMBER CURRENTCUBE.[Measures].[Ventas Año Anterior]
   )
 ), 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1  ; 
+VISIBLE = 1;  
 CREATE MEMBER CURRENTCUBE.[Measures].[Crecimiento Ventas MoM]
  AS IIF(
   IsEmpty([Measures].[Ventas Mes Anterior]) OR [Measures].[Ventas Mes Anterior] = 0,
   NULL,
   ([Measures].[Monto Neto] - [Measures].[Ventas Mes Anterior]) / [Measures].[Ventas Mes Anterior]
+), 
+FORMAT_STRING = "Percent", 
+NON_EMPTY_BEHAVIOR = { [Monto Neto] }, 
+VISIBLE = 1; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Ticket Promedio]
+ AS IIF(
+  IsEmpty([Measures].[Documentos Count]) OR [Measures].[Documentos Count] = 0,
+  NULL,
+  [Measures].[Monto Neto] / [Measures].[Documentos Count]
+), 
+FORMAT_STRING = "Currency", 
+NON_EMPTY_BEHAVIOR = { [Monto Neto] }, 
+VISIBLE = 1  ; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Porcentaje Descuento]
+ AS IIF(
+  IsEmpty([Measures].[Monto Bruto]) OR [Measures].[Monto Bruto] = 0,
+  NULL,
+  [Measures].[Descuento] / [Measures].[Monto Bruto]
 ), 
 FORMAT_STRING = "Percent", 
 NON_EMPTY_BEHAVIOR = { [Monto Neto] }, 
